@@ -30,7 +30,7 @@ class Filter extends React.Component {
         const { mealtype_id, location_id  } = qs;
        
         axios({
-            url: 'http://localhost:2021/locations',
+            url: 'https://warm-tundra-66061.herokuapp.com/locations',
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -42,7 +42,7 @@ class Filter extends React.Component {
         // Call filter API 
         axios({
             method: 'POST',
-            url: 'http://localhost:2021/filter',
+            url: 'https://warm-tundra-66061.herokuapp.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: {
                 mealtype_id: mealtype_id,
@@ -58,7 +58,7 @@ class Filter extends React.Component {
         const { mealtype_id, location_id, cuisine_id, lcost, hcost, page } = this.state;
         axios({
             method: 'POST',
-            url: 'http://localhost:2021/filter',
+            url: 'https://warm-tundra-66061.herokuapp.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: {
                 sort: sort,
@@ -78,7 +78,7 @@ class Filter extends React.Component {
         const { mealtype_id, location_id, cuisine_id, sort, page } = this.state;
         axios({
             method: 'POST',
-            url: 'http://localhost:2021/filter',
+            url: 'https://warm-tundra-66061.herokuapp.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: {
                 sort: sort,
@@ -108,7 +108,7 @@ class Filter extends React.Component {
        
         axios({
             method: 'POST',
-            url: 'http://localhost:2021/filter',
+            url:'https://warm-tundra-66061.herokuapp.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: {
                 sort: sort,
@@ -130,7 +130,7 @@ class Filter extends React.Component {
         const { mealtype_id, sort,  cuisine_id: cuisine_id, lcost, hcost, page } = this.state;
         axios({
             method: 'POST',
-            url: 'http://localhost:2021/filter',
+            url:'https://warm-tundra-66061.herokuapp.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: {
                 sort: sort,
@@ -151,7 +151,7 @@ class Filter extends React.Component {
         const { mealtype_id, location_id, lcost, hcost, sort } = this.state;
         axios({
             method: 'POST',
-            url: 'http://localhost:2021/filter',
+            url:'https://warm-tundra-66061.herokuapp.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: {
                 sort: sort,

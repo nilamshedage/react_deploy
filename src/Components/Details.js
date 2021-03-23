@@ -45,7 +45,7 @@ class Details extends React.Component {
         const resId = qs.restaurant;
 
         axios({
-            url: `http://localhost:2021/getrestaurantbyid/${resId}`,
+            url: `https://warm-tundra-66061.herokuapp.com/getrestaurantbyid/${resId}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -59,7 +59,7 @@ class Details extends React.Component {
         this.setState({ [state]: value })
         if (state == 'orderModalIsOpen') {
             axios({
-                url: `http://localhost:2021/getItemsbyrestaurant/${restaurantId}`,
+                url: `https://warm-tundra-66061.herokuapp.com/getItemsbyrestaurant/${restaurantId}`,
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             }).then(res => {
@@ -135,7 +135,7 @@ class Details extends React.Component {
     }
 
     getData = (data) => {
-        return fetch(`http://localhost:2021/payment`, {
+        return fetch(`https://warm-tundra-66061.herokuapp.com/payment`, {
             method: "POST",
             headers: {
                 Accept: "application/json",

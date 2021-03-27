@@ -86,7 +86,7 @@ class Header extends React.Component {
                             cookiePolicy={'single_host_origin'}
                         /><br />
                         <FacebookLogin
-                            appId="303627837830083"
+                            appId="151048506822196"
                             textButton="Continue with Facebook"
                             size="metro"
                             fields="name,email,picture"
